@@ -24,10 +24,7 @@ def intialize():
 
 		print 'Cannot load properties  !';
 		exit();
-
-	#Start DMA Variables:	
-	#prod/dev
-	#end of DMA Variables:
+	
 	print 'initialization completed';
 
 def writeFile(directory_name, file_name, content):
@@ -176,7 +173,7 @@ def createdomain():
 	setOption('OverwriteDomain', 'true')
 	cd('/')
 	cd('NMProperties')
-	set('ListenAddress','')
+	set('ListenAddress',adminServerAddress)
 	writeDomain(domainConfiguration)
 	closeTemplate()
 	print domName +" Domain created"
